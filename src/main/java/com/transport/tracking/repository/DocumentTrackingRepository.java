@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -14,7 +15,7 @@ public interface DocumentTrackingRepository extends CrudRepository<DocReportTrac
 
     public List<DocReportTrack> findAll();
 
-    List<DocReportTrack> findBySiteAndDocdate(String site, String date);
+    List<DocReportTrack> findBySiteAndDocdate(String site, Date date);
 
     @Query(value="select * from PILOT.XTMSDOCREPORTS c where c.SITE = ?1 and (c.DOCDATE between ?2 AND ?3)",nativeQuery = true)
     public List<DocReportTrack> getDocReportBySiteAndDateRange(String site, String sdate, String edate);

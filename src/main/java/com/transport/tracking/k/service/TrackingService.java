@@ -117,7 +117,7 @@ public class TrackingService {
 
     }
 
-    public List<VehLiveTrack> listTransports(String site,String date, Boolean active) {
+    public List<VehLiveTrack> listTransports(String site,Date date, Boolean active) {
         log.info("Transport service is loaded...");
         List<VehLiveTrack> vehicleList = null;
 
@@ -185,7 +185,7 @@ public class TrackingService {
         return new ArrayList<>();
     }
 
-    public List<DocReportTrack> listDocuments(String site,String date, Boolean active) {
+    public List<DocReportTrack> listDocuments(String site,Date date, Boolean active) {
         log.info("Transport service is loaded...");
         List<DocReportTrack> vehicleList = null;
 

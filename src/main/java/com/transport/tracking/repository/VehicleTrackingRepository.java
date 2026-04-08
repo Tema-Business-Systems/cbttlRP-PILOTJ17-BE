@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -12,7 +13,7 @@ public interface VehicleTrackingRepository extends CrudRepository<VehLiveTrack, 
 
     List<VehLiveTrack> findBySite(String site);
 
-    List<VehLiveTrack> findBySiteAndCurrDate(String site, String date);
+    List<VehLiveTrack> findBySiteAndCurrDate(String site, Date date);
 
     public List<VehLiveTrack> findAll();
 
