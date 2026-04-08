@@ -1,0 +1,12 @@
+<configuration>
+    <!-- ID of the service. It should be unique accross the Windows system-->
+    <id>TransportManagement</id>
+    <!-- Display name of the service -->
+    <name>TransportManagement</name>
+    <!-- Service description -->
+    <description>TransportManagement</description>
+
+    <!-- we need to execute java -jar ./XXX.jar -->
+    <executable>java</executable>
+    <arguments>-jar "%BASE%\TransportManagement.jar"</arguments>
+</configuration>

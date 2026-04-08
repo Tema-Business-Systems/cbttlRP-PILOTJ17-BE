@@ -1,0 +1,110 @@
+package com.transport.tracking.response;
+
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+@Getter
+@Setter
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class DriverVO {
+
+      private int updtick;
+      private String color;
+      private String driverid;
+      private String driver;
+      private Short active;
+      private String bptnum;
+      private String lanmain;
+      private String lansec;
+      private String cry;
+      private Date bir;
+      private Date credattim;
+      private Date upddattim;
+      private byte[] auuid;
+      private String creusr;
+      private String updusr;
+      private String bpaaddlig;
+      private String bpaaddlig_1;
+      private String bpaaddlig_2;
+      private String poscod;
+      private String cty;
+      private String mob;
+      private String web;
+      private String licenum;
+      private Date licedat;
+      private Short licetyp;
+      private Date validat;
+      private String delivby;
+      private Date lastvime;
+      private String fcy;
+      private String sat;
+      private String tel;
+      private String tel_1;
+      private String tel_2;
+      private String tel_3;
+      private String tel_4;
+      private String xuser;
+      private String xpwd;
+      private Short xsigcon;
+      private Short xcamcon;
+      private Short yper;
+      private int xlgnflg;
+      private String ybus;
+      private String xloginseqno;
+      private String xbadnum;
+      private Date xadrdat;
+      private String xdocno;
+      private Short xadrautcls;
+      private Short xadrautcls_1;
+      private Short xadrautcls_2;
+      private Short xadrautcls_3;
+      private Short xadrautcls_4;
+      private Short xadrautcls_5;
+      private Short xadrautcls_6;
+      private Short xadrautcls_7;
+      private Short xadrautcls_8;
+      private Short xadrautcls_9;
+      private Short xadrautcl1;
+      private Short xadrautcl1_1;
+      private Short xadrautcl1_2;
+      private Short xadrautcl1_3;
+      private Short xadrautcl1_4;
+      private Short xadrautcl1_5;
+      private Short xadrautcl1_6;
+      private Short xadrautcl1_7;
+      private Short xadrautcl1_8;
+      private Short xadrautcl1_9;
+      private Short xadrautcl2;
+      private Short xadrautcl2_1;
+      private Short xadrautcl2_2;
+      private Short xadrautcl2_3;
+      private Short xadrautcl2_4;
+      private Short xadrautcl2_5;
+      private Short xadrautcl2_6;
+      private Short xadrautcl2_7;
+      private Short xadrautcl2_8;
+      private Short xadrautcl2_9;
+      private Short xadrautcl3;
+      private Short xadrautcl3_1;
+      private Short xadrautcl3_2;
+      private Short xadrautcl3_3;
+      private Short xadrautcl3_4;
+      private Short xadrautcl3_5;
+      private Short xadrautcl3_6;
+      private Short xadrautcl3_7;
+      private Short xadrautcl3_8;
+      private Short xadrautcl3_9;
+      private String xx10c_geox;
+      private String xx10c_geoy;
+      private String note;
+      private String lncstrtime;
+      private String lncduration;
+      private BigDecimal rowid;
+      private String type = "open";
+      private boolean isDropped;
+}
