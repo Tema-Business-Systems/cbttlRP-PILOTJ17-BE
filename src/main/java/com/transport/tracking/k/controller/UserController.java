@@ -9,10 +9,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 @RestController
 @CrossOrigin(origins={"http://localhost:3000","https://preview--coke-logistics-flow.lovable.app","http://localhost:3431","http://localhost:3432","http://10.1.5.10:3432","http://10.1.5.10:3431","https://10.1.5.10:3432","https://10.1.5.10:3431","https://routeplanner.cbttl.com:3431","https://routeplanner.cbttl.com:3432", "http://10.1.5.10:3535"})

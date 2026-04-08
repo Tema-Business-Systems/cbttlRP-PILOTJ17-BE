@@ -1,6 +1,6 @@
 package com.transport.tracking.k.service;
 
-import com.sun.istack.NotNull;
+import jakarta.validation.constraints.NotNull;
 import com.transport.tracking.model.User;
 import com.transport.tracking.repository.UserRepository;
 import com.transport.tracking.response.UserVO;
@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

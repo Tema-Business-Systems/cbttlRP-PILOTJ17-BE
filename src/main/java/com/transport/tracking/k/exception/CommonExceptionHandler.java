@@ -5,6 +5,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -26,7 +27,7 @@ public class CommonExceptionHandler extends ResponseEntityExceptionHandler {
 
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
-                                                                  HttpHeaders httpHeaders, HttpStatus status,
+                                                                  HttpHeaders httpHeaders, HttpStatusCode status,
                                                                   WebRequest request) {
         return ResponseEntity.badRequest().body(this.getErrorVO(HttpStatus.BAD_REQUEST.value(), ex.getBindingResult().getAllErrors().parallelStream()
                 .map(o -> String.format("%s: %s", o.getObjectName(), o.getDefaultMessage())).collect(Collectors.toList()), request, INTERNAL_SERVER_ERROR));

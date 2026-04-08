@@ -4,14 +4,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.transport.tracking.model.*;
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 import com.transport.tracking.repository.*;
 import com.transport.tracking.response.*;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.exec.util.MapUtils;
-import org.apache.commons.lang3.time.DateUtils;
-import org.hibernate.query.NativeQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,13 +15,10 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
-import java.util.TimeZone;
 
-import javax.persistence.*;
-import javax.transaction.Transactional;
-import java.math.BigDecimal;
+import jakarta.persistence.*;
+import jakarta.transaction.Transactional;
 import java.text.MessageFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -2457,15 +2450,6 @@ private String UPDATE_doc_QUERY_AFTER_doc_DELETION = "update {0}.{1} SET XX10C_N
         }
         return null;
     }
-
-    /**
-     * Filters documents for a trip based on status in XTMSDROP and existence in other trips.
-     *
-     * @param selectedTripData List of documents from totalObject.selectedTripData
-     * @param skippedDocs List to collect skipped document numbers
-     * @return List of valid documents to be inserted/updated in the trip
-     */
-
 
     private Map<String, Object> getDocumentInfo(String docNum) {
         try {
